@@ -1,0 +1,80 @@
+@use "..//util" as u;
+.hero {
+  padding-left: u.rem(132);
+
+  &_image {
+    background-image: url(/assests/img/top-right.svg);
+    max-width: 100%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-top: -98px;
+    z-index: -1;
+    flex: 1;
+    order: 2;
+
+    &__container {
+      background-image: url(/assests/img/half\ pie.svg),
+        url(/assests/img/half_circle.svg);
+      background-position: 99% 25%, right bottom;
+      background-repeat: no-repeat;
+      height: 700px;
+      max-width: 786px;
+    }
+ 
+
+  &__graph {
+    position: absolute;
+    margin-top: 263px;
+    margin-left: 123px;
+    z-index: 1;
+  }
+  &__profile {
+    max-width: 100%;
+    position: relative;
+    margin-top: u.rem(145);
+    padding-left: 17.5rem;
+  }
+}
+
+&__text {
+  margin-top: u.rem(140);
+  width: u.em(573);
+  height: u.em(386);
+
+  h1 {
+    width: u.rem(257);
+    line-height: 50px;
+  }
+  h5 {
+    color: hsl(202, 87%, 54%);
+    margin-bottom: 30px;
+  }
+  p {
+    line-height: u.rem(30);
+    width: 25.5rem;
+    padding-bottom: u.rem(18);
+  }
+}
+.btn1_cta {
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 22px;
+  font-weight: 700;
+  height: 52px;
+  margin-right: u.rem(10);
+}
+
+.btn2_cta {
+  color: hsl(202, 87%, 54%);
+  text-align: center;
+  line-height: 22px;
+  font-weight: 700;
+  height: 52px;
+  text-transform: capitalize;
+  background-color: white;
+  border: 1px solid black;
+  border-color: hsl(202, 87%, 54%);
+}
+}

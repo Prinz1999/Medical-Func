@@ -1,0 +1,112 @@
+@use "../util" as u;
+.header {
+  font-size: 0.875rem;
+  line-height: u.rem(22);
+  font-weight: 700;
+
+  nav {
+    display:flex;
+    padding: 30px;
+    
+  }
+  &__logo {
+    flex-basis: 20%;
+    margin-left: 165px;
+
+    img {
+      width: u.rem(157);
+      height: u.rem(32);
+
+    }
+  }
+
+  &__hamburger {
+    //mobile menu
+
+    span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: hsla(240, 65%, 36%, 0.984);
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+
+    &.open{
+      span:first-child{
+      transform:rotate(45deg);
+
+      }
+      span:nth-child(2){
+      opacity:0;
+
+      }
+      span:last-child{
+      transform:rotate(-45deg);
+
+
+      }
+      
+
+
+    }
+  }
+
+  &_link {
+    a {
+      &:not(:last-child) {
+        margin-right: 21px;
+      }
+    }
+    
+ 
+  }
+
+  &_link_right {
+    a {
+      &:not(:last-child) {
+        margin-right: 45px;
+      }
+    }
+    a.header__cta{
+      color:white;
+    }
+  }
+
+
+  ///////for nav container
+  &__nav-container{
+    width: u.rem(815);
+  }
+}
+
+//visibility
+.hide-for-phone {
+  @include u.breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include u.breakpoint-up(large) {
+    display: none;
+}
+
+}
+
+
+
+
+///demo
+.bg_img{
+  width:100%;
+  position:relative;
+  background-image:  url(/assests/img/top-left-corner.svg) ;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 17.65rem;
+
+}
+

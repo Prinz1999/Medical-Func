@@ -1,0 +1,236 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  max-width: 1440px;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  color: hsl(0deg, 0%, 45%);
+  font-family: sans-serif;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 45%);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-jc-se {
+  justify-content: space-evenly;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 1rem + 2vw, 3.625rem);
+  line-height: 80px;
+  color: hsl(228deg, 28%, 20%);
+  letter-spacing: 0.2px;
+}
+
+h2 {
+  font-size: clamp(1.375rem, 0.875rem + 1.5vw, 2.25rem);
+}
+
+p {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+h6 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  color: hsl(202deg, 87%, 54%);
+}
+
+.header {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+}
+.header nav {
+  display: flex;
+  padding: 30px;
+}
+.header__logo {
+  flex-basis: 20%;
+  margin-left: 165px;
+}
+.header__logo img {
+  width: 9.8125rem;
+  height: 2rem;
+}
+.header__hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: hsla(240deg, 65%, 36%, 0.984);
+}
+.header__hamburger span:not(:last-child) {
+  margin-bottom: 5px;
+}
+.header__hamburger.open span:first-child {
+  transform: rotate(45deg);
+}
+.header__hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.header__hamburger.open span:last-child {
+  transform: rotate(-45deg);
+}
+.header_link a:not(:last-child) {
+  margin-right: 21px;
+}
+.header_link_right a:not(:last-child) {
+  margin-right: 45px;
+}
+.header_link_right a.header__cta {
+  color: white;
+}
+.header__nav-container {
+  width: 50.9375rem;
+}
+
+@media (max-width: 56.25em) {
+  .hide-for-phone {
+    display: none;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.bg_img {
+  width: 100%;
+  position: relative;
+  background-image: url(/assests/img/top-left-corner.svg);
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 17.65rem;
+}
+
+.hero {
+  padding-left: 8.25rem;
+}
+.hero_image {
+  background-image: url(/assests/img/top-right.svg);
+  max-width: 100%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-top: -98px;
+  z-index: -1;
+  flex: 1;
+  order: 2;
+}
+.hero_image__container {
+  background-image: url(/assests/img/half\ pie.svg), url(/assests/img/half_circle.svg);
+  background-position: 99% 25%, right bottom;
+  background-repeat: no-repeat;
+  height: 700px;
+  max-width: 786px;
+}
+.hero_image__graph {
+  position: absolute;
+  margin-top: 263px;
+  margin-left: 123px;
+  z-index: 1;
+}
+.hero_image__profile {
+  max-width: 100%;
+  position: relative;
+  margin-top: 9.0625rem;
+  padding-left: 17.5rem;
+}
+.hero__text {
+  margin-top: 8.75rem;
+  width: 35.8125em;
+  height: 24.125em;
+}
+.hero__text h1 {
+  width: 16.0625rem;
+  line-height: 50px;
+}
+.hero__text h5 {
+  color: hsl(202deg, 87%, 54%);
+  margin-bottom: 30px;
+}
+.hero__text p {
+  line-height: 1.875rem;
+  width: 25.5rem;
+  padding-bottom: 1.125rem;
+}
+.hero .btn1_cta {
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 22px;
+  font-weight: 700;
+  height: 52px;
+  margin-right: 0.625rem;
+}
+.hero .btn2_cta {
+  color: hsl(202deg, 87%, 54%);
+  text-align: center;
+  line-height: 22px;
+  font-weight: 700;
+  height: 52px;
+  text-transform: capitalize;
+  background-color: white;
+  border: 1px solid black;
+  border-color: hsl(202deg, 87%, 54%);
+}
+
+button, .button {
+  padding: 0.9375rem 1.5625rem;
+  border-radius: 5px;
+  background: hsl(202deg, 87%, 54%);
+  cursor: pointer;
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+  border-style: none;
+}
+
+.layout-2 {
+  margin-top: 68.8px;
+}/*# sourceMappingURL=style.css.map */

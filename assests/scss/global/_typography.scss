@@ -1,0 +1,39 @@
+@use '../util/' as u;
+
+h1,h2,h3{
+    font-weight: 700;
+    line-height:1.1;
+    margin-top: 0;
+}
+
+p{
+    margin-top: 0;
+}
+h1{
+    // font-size: clamp(1.75rem, 1rem +2vw, 2.5rem);
+     font-size: clamp(u.rem(40), u.rem(16) + 2vw, u.rem(58));
+     line-height: 80px;
+     color:  hsl(228, 28%, 20%);
+     letter-spacing: 0.2px;
+}
+h2{
+      // font-size: clamp(1.375rem, 0.875rem +1.5vw, 2.25rem);
+    font-size: clamp(u.rem(22),u.rem(14) + 1.5vw, u.rem(36));
+}
+p{
+    margin-top:0;
+    font-size: u.rem(16);
+}
+
+h5{
+    font-size:u.rem(16);
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+h6{
+    font-size:u.rem(14);
+    font-weight: 700;
+    line-height:  u.rem(24);
+    color:hsl(202, 87%, 54%);
+}

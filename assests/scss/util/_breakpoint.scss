@@ -1,0 +1,80 @@
+@use 'function' as fun;
+
+// 700 for mobile and less display
+ //900 for the tablets (700-900)
+ //1440 for the desktop and for 1440 or greater...
+
+ $breakpoints-up: (
+ 'medium': fun.em(700), //1m is equal to the brower font size in the media quires default value(16)
+ 'large' : fun.em(900),
+ 'xlarge': fun.em(1440),
+ );
+ 
+ $breakpoints-down:(
+     'small':43.7485em,
+     'medium':56.25em ,
+     'large':89.99875em,
+ );
+ 
+ @mixin breakpoint-up($size){
+    @media (min-width: map-get($breakpoints-up, $size)){
+        @content;
+    }
+}
+
+ @mixin breakpoint-down($size) {
+     @media (max-width: map-get($breakpoints-down, $size)){
+         @content;  /// going to load all the styles rules in the mixins while we're using it.
+     }
+ }
+
+
+//Breakpoint-mixin
+$breakpoints: (
+        "phone":        400px,
+        "phone-wide":   480px,
+        "phablet":      560px,
+        "tablet-small": 640px,
+        "tablet":       768px,
+        "tablet-wide":  992px,
+        "desktop":      1248px,
+        "desktop-wide": 1440px
+);
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+//Example
+//.example-header {
+//  padding: 20px;
+//  font-size: 16px;
+//  @include mq('tablet-wide') {
+//    padding-top: 30px;
+//    font-size: 22px;
+//  }
+//}
+//for Max-width
+//.example-header {
+//  padding: 20px;
+//  font-size: 16px;
+//  @include mq('tablet', max) {
+//    padding-top: 30px;
+//    font-size: 22px;
+//  }
+//}   
+// @include mq('tablet-wide', max) {
+//   bottom: 56px
+// }
+// @include mq('phablet', max) {
+//   bottom: 32px;
+// }
+// @include mq('phone', max) {
+//   bottom: 8px;
+// }
