@@ -1,40 +1,55 @@
-@use '../util' as u;
-html{
-    box-sizing: border-box;
-    font-size: 100%;
-    max-width:1440px;
+@use "../util" as u;
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  // max-width: 1440px;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    font-size:u.rem(14);
-    color: hsl(0, 0%, 45%);
-    font-family: sans-serif;
-  }
-  
-  a, a:visited, a:hover {
-    text-decoration: none;
-    color:hsl(0, 0%, 45%) ;
-  }
-  
-  .flex {
-    display: flex;
-  }
-  .flex-jc-sb {
-    justify-content: space-between;
-  }
-  .flex-jc-c {
-    justify-content: center;
-  }
-  .flex-jc-se {
-    justify-content: space-evenly;
-  }
-  .flex-ai-c {
-    align-items: center;
-  }
-  
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: u.rem(14);
+  color: hsl(0, 0%, 45%);
+  font-family: sans-serif;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: hsl(0, 0%, 45%);
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-se {
+  justify-content: space-evenly;
+}
+.flex-ai-c {
+  align-items: center;
+}
+
+.normal_text {
+  font-weight: 700;
+  font-size: u.rem(14);
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.tc {
+  align-items: center;
+  text-align: center;
+}

@@ -1,67 +1,69 @@
 @use "../util" as u;
+a:hover {
+  color: u.$primary-text-color;
+}
 .header {
   font-size: 0.875rem;
   line-height: u.rem(22);
   font-weight: 700;
 
   nav {
-    display:flex;
+    display: flex;
     padding: 30px;
-    
   }
   &__logo {
+    @include u.breakpoint-down(small) {
+      margin-left: 0;
+    }
+    max-width: 100%;
     flex-basis: 20%;
     margin-left: 165px;
+    flex-basis: 0;
 
     img {
       width: u.rem(157);
       height: u.rem(32);
-
     }
   }
-
+  //for hamburger menu
   &__hamburger {
-    //mobile menu
-
     span {
       display: block;
       width: 26px;
       height: 2px;
       background-color: hsla(240, 65%, 36%, 0.984);
+      transition: all 300ms ease-in-out;
+      transform-origin: center left;
 
       &:not(:last-child) {
         margin-bottom: 5px;
       }
     }
 
-    &.open{
-      span:first-child{
-      transform:rotate(45deg);
-
+    &.open {
+      span:first-child {
+        transform: rotate(45deg);
       }
-      span:nth-child(2){
-      opacity:0;
-
+      span:nth-child(2) {
+        opacity: 0;
       }
-      span:last-child{
-      transform:rotate(-45deg);
-
-
+      span:last-child {
+        transform: rotate(-45deg);
       }
-      
-
-
     }
   }
-
+  // for nav link
   &_link {
+    @include u.breakpoint-up(medium) {
+      margin-left: -248px;
+    }
+    border: 1px;
     a {
+      transition: color 200ms ease-in-out;
       &:not(:last-child) {
         margin-right: 21px;
       }
     }
-    
- 
   }
 
   &_link_right {
@@ -70,43 +72,41 @@
         margin-right: 45px;
       }
     }
-    a.header__cta{
-      color:white;
+    a.header__cta {
+      color: white;
     }
   }
 
-
-  ///////for nav container
-  &__nav-container{
+  /////for nav container
+  &__nav-container {
     width: u.rem(815);
+    @include u.breakpoint-down(medium) {
+    }
+  }
+
+  //visibility
+  .hide-for-phone {
+    @include u.breakpoint-down(medium) {
+      display: none;
+    }
+  }
+
+  .hide-for-desktop {
+    @include u.breakpoint-up(large) {
+      display: none;
+    }
   }
 }
-
-//visibility
-.hide-for-phone {
-  @include u.breakpoint-down(medium) {
-    display: none;
+.bg_img {
+  // width: 100%;
+  // position: relative;
+  // background-image: url(/assests/img/top-left-corner.svg);
+  // background-position: left top;
+  // background-repeat: no-repeat;
+  @include u.breakpoint-down(small) {
+    background-image: none;
   }
+  background: url(/assests/img/top-left-corner.svg) no-repeat left top / contain;
+
+  // min-height: 17.65rem;
 }
-
-.hide-for-desktop {
-  @include u.breakpoint-up(large) {
-    display: none;
-}
-
-}
-
-
-
-
-///demo
-.bg_img{
-  width:100%;
-  position:relative;
-  background-image:  url(/assests/img/top-left-corner.svg) ;
-  background-position: left top;
-  background-repeat: no-repeat;
-  min-height: 17.65rem;
-
-}
-

@@ -1,0 +1,54 @@
+@use "../util" as u;
+.footer_container {
+  padding: 50px 235px 52px 192px;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include u.breakpoint-up(large) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 1.6fr;
+    // grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "info legal features resources touch";
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+  }
+
+  a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+  &__info {
+    @include u.breakpoint-up(large) {
+      grid-area: info;
+    }
+  }
+  &__touch {
+    vertical-align: center;
+    &__text {
+      margin: 0;
+      color: u.$second-text-color;
+    }
+    &__img {
+      padding-right: 10px;
+    }
+  }
+
+  &__content {
+    align-items: center;
+    padding: 25px 258px 25px 192px;
+    background-color: hsl(0, 0%, 98%);
+  }
+}
+a:not(:last-child) {
+  display: inline-block;
+  margin-right: 23px;
+}

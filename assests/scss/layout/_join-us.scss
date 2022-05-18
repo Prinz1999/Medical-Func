@@ -1,0 +1,40 @@
+@use "../util" as u;
+.ju_container {
+  padding: 160px 376px 162px 376px;
+}
+
+.join-us {
+  &__newletter {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  &__title {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  &__descrip {
+    line-height: 1.5;
+  }
+  &__email {
+    padding-top: 80px;
+  }
+  &__input {
+    width: 517px;
+    height: 58px;
+    border: 1px solid;
+    color: #e6e6e6;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+
+  &__btn {
+    width: 117px;
+    height: 58px;
+    padding: 0;
+    border: 1px solid #e6e6e6;
+    background-color: u.$primary-text-color;
+    color: white;
+    border-radius: 0px 5px 5px 0px;
+    margin-left: -10px;
+  }
+}

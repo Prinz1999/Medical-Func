@@ -1,0 +1,81 @@
+@use "../util" as u;
+
+.activity {
+  margin-top: 77px;
+  padding-top: 160px;
+  padding-bottom: u.rem(35);
+  margin-left: 198.5px;
+  margin-right: 197.68px;
+
+  @include u.breakpoint-down(medium) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0px 40px 0px 40px;
+  }
+
+  h6 {
+    margin-bottom: u.rem(10);
+  }
+  p {
+    margin-top: 10px;
+    font-weight: 400;
+    line-height: u.rem(23);
+
+    @include u.breakpoint-up(medium) {
+      width: 469px;
+    }
+  }
+
+  &__grid {
+    margin-top: u.rem(80);
+    gap: 30px;
+
+    @include u.breakpoint-up(medium) {
+      display: flex;
+      flex-wrap: initial;
+    }
+  }
+
+  &__item {
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+    background-color: white;
+
+    @include u.breakpoint-down(small) {
+      margin-bottom: 20px;
+    }
+
+    @include u.breakpoint-up(large) {
+      flex: 1;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    padding-left: 40px;
+    padding-top: 39px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: u.rem(16);
+    line-height: u.rem(24);
+    letter-spacing: 0.1px;
+    color: hsl(228, 28%, 20%);
+    padding-top: 24px;
+    padding-left: 40px;
+  }
+  &__line {
+    padding-left: 40px;
+    padding-top: 20px;
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    width: 50%;
+    padding-bottom: 35px;
+    padding-top: 20px;
+    padding-left: 40px;
+  }
+}

@@ -1,11 +1,27 @@
-@use '../util' as u;
-button, .button{
-    padding: u.rem(15) u.rem(25);
-    border-radius:5px;
-    background:hsl(202, 87%, 54%);
-    cursor:pointer;
-    text-transform: uppercase;
-    color: hsl(0, 0%, 100%);
-    border-style: none;
-
-      }
+@use "../util" as u;
+button,
+.button {
+  padding: u.rem(15) u.rem(25);
+  border-radius: 5px;
+  background: u.$primary-text-color;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: u.$light-text-color;
+  border-style: none;
+}
+.btn {
+  transition: opacity 300ms ease-in-out;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+}
+a:hover {
+  opacity: 0.7;
+}
+.btn2_cta {
+  color: u.$primary-text-color !important;
+  background-color: white;
+  border: 1px solid black;
+  border-color: hsl(202, 87%, 54%);
+}

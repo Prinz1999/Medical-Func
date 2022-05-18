@@ -8,73 +8,580 @@
     <title>MedicalFunc</title>
   </head>
   <body>
-    <div class="bg_img">
     <header class="header">
+      <div class="bg_img">
+        <nav class="flex flex-jc-sb flex-ai-c">
+          <a href="#" class="header__logo"
+            ><img src="./assests/img/logo.svg"
+          /></a>
 
-      <nav class="flex  flex-ai-c">
-        <a href="#" class="header__logo"
-          ><img src="./assests/img/logo.svg"/></a>
-          
+          <a
+            id="btnHamburger"
+            href="#"
+            class="header__hamburger hide-for-desktop"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+          <div class="header_link hide-for-phone">
+            <a href="#">Home</a>
+            <a href="#">Product</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+          </div>
 
-          <div class="header__nav-container flex-jc-sb flex flex-ai-c ">
+          <div class="header_link_right hide-for-phone">
+            <a href="#">Login</a>
+            <a href="#" class="button header__cta">
+              Join Us &ensp; <img src="./assests/img/Vector.svg" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-            <div class="header_link hide-for-phone">
-              <a href="#">Home</a>
-              <a href="#">Product</a>
-              <a href="#">Pricing</a>
-              <a href="#">Contact</a>
-            </div>
-    
-            <div class="header_link_right hide-for-phone">
-              <a href="#">Login</a>
-              <a href="#" class="button header__cta">
-                Join Us &ensp; <img src="./assests/img/Vector.svg" />
-              </a>
+    <section class="hero">
+      <div class="hero_image">
+        <!-- <div class="hero_image__container">
+          <img src="/assests/img/image 2019.svg" class="hero_image__graph" />
+          <img src="/assests/img/profile img.svg" class="hero_image__profile" />
+          <img src="/assests/img/slide.svg" class="hero_image__slide" />
+        </div> -->
+      </div>
+
+      <div class="hero__text hero__text__container">
+        <h5>Welcome</h5>
+        <h1>Online Appointment</h1>
+        <p>
+          Medical Functional is most focused in helping you discover your most
+          beautiful smile
+        </p>
+        <a href="#" class="btn1_cta button btn"> Get Quote Now </a>
+        <a href="#" class="btn2_cta button btn"> Learn More </a>
+      </div>
+    </section>
+    <section class="activity">
+      <h6>Practice Advice</h6>
+      <h2>Our Activity</h2>
+      <p>
+        Problems trying to resolve the conflict between the two major realms of
+        Classical physics: Newtonian mechanics
+      </p>
+      <div class="activity__grid">
+        <div class="activity__item">
+          <div class="activity__icon">
+            <img src="/assests/img/section_2_img/phone.svg" />
+          </div>
+
+          <div class="activity__title">Emergency Case</div>
+          <img
+            src="/assests/img/section_2_img/fixed-width fixed-height sec-.svg"
+            class="activity__line"
+          />
+          <div class="activity__desc">
+            The gradual accumulation of information about
+          </div>
+        </div>
+
+        <div class="activity__item">
+          <div class="activity__icon">
+            <img src="/assests/img/section_2_img/healrth.svg" />
+          </div>
+
+          <div class="activity__title">Health Queries</div>
+          <img
+            src="/assests/img/section_2_img/fixed-width fixed-height sec-.svg"
+            class="activity__line"
+          />
+          <div class="activity__desc">
+            The gradual accumulation of information about
+          </div>
+        </div>
+
+        <div class="activity__item">
+          <div class="activity__icon">
+            <img src="/assests/img/section_2_img/web.svg" />
+          </div>
+
+          <div class="activity__title">Painless procedures</div>
+          <img
+            src="/assests/img/section_2_img/fixed-width fixed-height sec-.svg"
+            class="activity__line"
+          />
+          <div class="activity__desc">
+            The gradual accumulation of information about
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="leading flex container">
+      <div class="leading__img"></div>
+      <div class="leading__text">
+        <div class="leading__line">
+          <img
+            src="/assests/img/Leading_medicine/fixed-width fixed-height sec-.svg"
+          />
+        </div>
+        <h2>Leading Medicine</h2>
+        <p>
+          Problems trying to resolve the conflict between the two major realms
+          of Classical physics: Newtonian mechanics
+        </p>
+        <a href="#" class="leading__text__link"
+          >Learn More <img src="/assests/img/Leading_medicine/none.svg"
+        /></a>
+      </div>
+    </section>
+    <section class="specialize">
+      <h6>Practice Advice</h6>
+      <h2>Our Doctors Specialize in you</h2>
+      <p class="specialize__desc">
+        Problems trying to resolve the conflict between the two major realms of
+        Classical physics: Newtonian mechanics
+      </p>
+      <div class="specialize__grid flex">
+        <div class="specialize__card">
+          <!-- style="
+              background-image: url(/assests/img/doctor_speacilize/Doc.svg);
+            " -->
+          <div class="specialize__container">
+            <img src="/assests/img/doctor_speacilize/Doc.png"/
+            class="specialize__img">
+            <div class="specialize__container__content">
+              <div class="specialize__img__sale flex-ai-c normal_text">
+                sale
+              </div>
+              <div class="specialize__img__cirlce flex">
+                <a href="#">
+                  <img src="/assests/img/doctor_speacilize/Like_btn.svg"
+                /></a>
+              </div>
+              <div class="specialize__img__cirlce">
+                <a href="#">
+                  <img src="/assests/img/doctor_speacilize/shooping_cart.svg"
+                /></a>
+              </div>
+              <div class="specialize__img__cirlce">
+                <a href="#">
+                  <img
+                    src="/assests/img/doctor_speacilize/eye.svg"
+                    class="eye_img"
+                /></a>
+              </div>
             </div>
           </div>
 
-          <a href="#" class="header__hamburger open hide-for-desktop">
-            <span></span>
-            <span></span>
-            <span></span>
-          </a>
-      </nav>
-    </header>
-    <section class="hero flex">
-      <div class="hero_image">
-        <div class="hero_image__container">
-        <img src="/assests/img/image 2019.svg" class="hero_image__graph">
-        <img src="/assests/img/profile img.svg" class="hero_image__profile">
-        <!-- <img src="/assests/img/half pie.svg" class="hero_image__pie ">
-        <img src="assests/img/half_circle.svg" class="hero_imge__circle"> -->
-        <img src="/assests/img/slide.svg" class="hero_image__slide">
+          <!--<div class="specialize__text">
+            <p class="specialize__text__category normal_text flex flex-jc-sb">
+              English Department
+              <span class="specialize__text__category__rating"
+                ><img src="/assests/img/doctor_speacilize/star.svg" /> 4.9</span
+              >
+            </p>
+
+            <h5 class="specialize__text__title">Graphic Design</h5>
+            <p class="specialize__text__descrip normal_text">
+              We focus on ergonomics and meeting you where you work. It's only a
+              keystroke away.
+            </p>
+            <div class="specialize__text__sales flex">
+              <img src="/assests/img/doctor_speacilize/sales.svg" />
+              <h6>15 sales</h6>
+            </div>
+            <div class="specialize__text__price flex">
+              <h5 class="specialize__text__price__original">$16.48</h5>
+              <h5 class="specialize__text__price__discount">$6.48</h5>
+            </div>
+            <div class="specialize__text__detail flex flex-jc-sb flex-ai-c">
+              <div class="specialize__text__detail_content flex">
+                <img src="assests/img/doctor_speacilize/clock.svg" />
+                <p>22hr 30min</p>
+              </div>
+              <div class="specialize__text__detail__content flex">
+                <img src="/assests/img/doctor_speacilize/lessons.svg" />
+                <p>64 Lessons</p>
+              </div>
+              <div class="specialize__text__detail__content flex">
+                <img src="/assests/img/doctor_speacilize/progress.svg" />
+                <p>Progress</p>
+              </div>
+            </div>
+            <a href="#" class="specialize__btn btn2_cta button btn">
+              Learn More <img src="/assests/img/Leading_medicine/none.svg" />
+            </a>
+          </div> -->
+        </div>
+
+        <!--<div class="specialize__card">
+          <div
+            class="specialize__img flex"
+            style="
+              background-image: url(/assests/img/doctor_speacilize/lab_assistanec.svg);
+            "
+          >
+            <span class="specialize__img__sale flex-ai-c normal_text">
+              sale</span
+            >
+            <span class="specialize__img__cirlce"
+              ><a href="#">
+                <img src="/assests/img/doctor_speacilize/Like_btn.svg" /></a
+            ></span>
+            <span class="specialize__img__cirlce"
+              ><a href="#">
+                <img
+                  src="/assests/img/doctor_speacilize/shooping_cart.svg" /></a
+            ></span>
+            <span class="specialize__img__cirlce"
+              ><a href="#">
+                <img
+                  src="/assests/img/doctor_speacilize/eye.svg"
+                  class="eye_img" /></a
+            ></span>
+          </div>
+          <div class="specialize__text">
+            <p class="specialize__text__category normal_text flex flex-jc-sb">
+              English Department
+              <span class="specialize__text__category__rating"
+                ><img src="/assests/img/doctor_speacilize/star.svg" /> 4.9</span
+              >
+            </p>
+
+            <h5 class="specialize__text__title">Graphic Design</h5>
+            <p class="specialize__text__descrip normal_text">
+              We focus on ergonomics and meeting you where you work. It's only a
+              keystroke away.
+            </p>
+            <div class="specialize__text__sales flex">
+              <img src="/assests/img/doctor_speacilize/sales.svg" />
+              <h6>15 sales</h6>
+            </div>
+            <div class="specialize__text__price flex">
+              <h5 class="specialize__text__price__original">$16.48</h5>
+              <h5 class="specialize__text__price__discount">$6.48</h5>
+            </div>
+            <div class="specialize__text__detail flex flex-jc-sb flex-ai-c">
+              <div class="specialize__text__detail_content flex">
+                <img src="assests/img/doctor_speacilize/clock.svg" />
+                <p>22hr 30min</p>
+              </div>
+              <div class="specialize__text__detail__content flex">
+                <img src="/assests/img/doctor_speacilize/lessons.svg" />
+                <p>64 Lessons</p>
+              </div>
+              <div class="specialize__text__detail__content flex">
+                <img src="/assests/img/doctor_speacilize/progress.svg" />
+                <p>Progress</p>
+              </div>
+            </div>
+            <a href="#" class="specialize__btn btn2_cta button btn">
+              Learn More <img src="/assests/img/Leading_medicine/none.svg" />
+            </a>
+          </div>
+        </div>
+
+        <div class="specialize__card">
+          <div
+            class="specialize__img flex"
+            style="
+              background-image: url(/assests/img/doctor_speacilize/microscope.svg);
+              margin-left: 10px;
+            "
+          >
+            <!-- <img src="/assests/img/doctor_speacilize/Doc.png" />  
+            <span class="specialize__img__sale flex-ai-c normal_text">
+              sale</span
+            >
+            <span class="specialize__img__cirlce"
+              ><a href="#">
+                <img src="/assests/img/doctor_speacilize/Like_btn.svg" /></a
+            ></span>
+            <span class="specialize__img__cirlce"
+              ><a href="#">
+                <img
+                  src="/assests/img/doctor_speacilize/shooping_cart.svg" /></a
+            ></span>
+            <span class="specialize__img__cirlce"
+              ><a href="#">
+                <img
+                  src="/assests/img/doctor_speacilize/eye.svg"
+                  class="eye_img" /></a
+            ></span>
+          </div>
+          <div class="specialize__text">
+            <p class="specialize__text__category normal_text flex flex-jc-sb">
+              English Departement
+              <span class="specialize__text__category__rating"
+                ><img src="/assests/img/doctor_speacilize/star.svg" /> 4.9</span
+              >
+            </p>
+
+            <h5 class="specialize__text__title">Graphic Design</h5>
+            <p class="specialize__text__descrip normal_text">
+              We focus on ergonomics and meeting you where you work. It's only a
+              keystroke away.
+            </p>
+            <div class="specialize__text__sales flex">
+              <img src="/assests/img/doctor_speacilize/sales.svg" />
+              <h6>15 sales</h6>
+            </div>
+            <div class="specialize__text__price flex">
+              <h5 class="specialize__text__price__original">$16.48</h5>
+              <h5 class="specialize__text__price__discount">$6.48</h5>
+            </div>
+            <div class="specialize__text__detail flex flex-jc-sb flex-ai-c">
+              <div class="specialize__text__detail_content flex">
+                <img src="assests/img/doctor_speacilize/clock.svg" />
+                <p>22hr 30min</p>
+              </div>
+              <div class="specialize__text__detail__content flex">
+                <img src="/assests/img/doctor_speacilize/lessons.svg" />
+                <p>64 Lessons</p>
+              </div>
+              <div class="specialize__text__detail__content flex">
+                <img src="/assests/img/doctor_speacilize/progress.svg" />
+                <p>Progress</p>
+              </div>
+            </div>
+            <a href="#" class="specialize__btn btn2_cta button btn">
+              Learn More <img src="/assests/img/Leading_medicine/none.svg" />
+            </a>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- <section class="pricing container">
+      <h6>Practice Advice</h6>
+      <h2>Pricing</h2>
+      <p class="pricing__descrip">
+        Problems trying to resolve the conflict between the two major realms of
+        Classical physics: Newtonian mechanics
+      </p>
+
+      <div class="pricing__pricing_container flex">
+        <div class="pricing__card">
+          <div class="pricing__item">
+            <span class="pricing__item__cirlce">
+              <img src="/assests/img/pricing/coolicon.svg"
+            /></span>
+          </div>
+          <h3>Free</h3>
+          <h6 class="pricing__info">Organize across all apps by hand</h6>
+          <h2>19$</h2>
+          <h6 class="pricing__txt">Per Month</h6>
+          <p class="pricing__info">
+            Slate helps you see how many more days you need...
+          </p>
+
+          <a href="#" class="pricing__btn-cta button btn"> Try for free</a>
+
+          <div class="pricing__card-item margin-top flex">
+            <img src="/assests/img/pricing/green-tick.svg" />
+            <h6 class="pricing__card-item__txt">Unlimited product updates</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/green-tick.svg" />
+            <h6 class="pricing__card-item__txt">Unlimited product updates</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/green-tick.svg" />
+            <h6 class="pricing__card-item__txt">Unlimited product updates</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/grey-tick.svg" />
+            <h6 class="pricing__card-item__txt">1GB Cloud storage</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/grey-tick.svg" />
+            <h6 class="pricing__card-item__txt">Email and community support</h6>
+          </div>
+        </div>
+
+        <div class="pricing__card">
+          <div class="pricing__item">
+            <span class="pricing__item__cirlce">
+              <img src="/assests/img/pricing/coolicon.svg"
+            /></span>
+          </div>
+          <h3>Free</h3>
+          <h6 class="pricing__info">Organize across all apps by hand</h6>
+          <h2>19$</h2>
+          <h6 class="pricing__txt">Per Month</h6>
+          <p class="pricing__info">
+            Slate helps you see how many more days you need...
+          </p>
+
+          <a href="#" class="pricing__btn-cta button btn"> Try for free</a>
+
+          <div class="pricing__card-item margin-top flex">
+            <img src="/assests/img/pricing/green-tick.svg" />
+            <h6 class="pricing__card-item__txt">Unlimited product updates</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/green-tick.svg" />
+            <h6 class="pricing__card-item__txt">Unlimited product updates</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/green-tick.svg" />
+            <h6 class="pricing__card-item__txt">Unlimited product updates</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/grey-tick.svg" />
+            <h6 class="pricing__card-item__txt">1GB Cloud storage</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/grey-tick.svg" />
+            <h6 class="pricing__card-item__txt">Email and community support</h6>
+          </div>
+        </div>
+
+        <div class="pricing__card">
+          <div class="pricing__item">
+            <span class="pricing__item__cirlce">
+              <img src="/assests/img/pricing/coolicon.svg"
+            /></span>
+          </div>
+          <h6 class="pricing__info">Organize across all apps by hand</h6>
+          <h3>Free</h3>
+          <h2>19$</h2>
+          <h6 class="pricing__txt">Per Month</h6>
+          <p class="pricing__info">
+            Slate helps you see how many more days you need...
+          </p>
+
+          <a href="#" class="pricing__btn-cta button btn"> Try for free</a>
+
+          <div class="pricing__card-item margin-top flex">
+            <img src="/assests/img/pricing/green-tick.svg" />
+            <h6 class="pricing__card-item__txt">Unlimited product updates</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/green-tick.svg" />
+            <h6 class="pricing__card-item__txt">Unlimited product updates</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/green-tick.svg" />
+            <h6 class="pricing__card-item__txt">Unlimited product updates</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/grey-tick.svg" />
+            <h6 class="pricing__card-item__txt">1GB Cloud storage</h6>
+          </div>
+          <div class="pricing__card-item flex">
+            <img src="/assests/img/pricing/grey-tick.svg" />
+            <h6 class="pricing__card-item__txt">Email and community support</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="review container">
+      <h6 class="review__advice">Practice Advice</h6>
+      <h2 class="review__title">Each and every client is important</h2>
+      <p class="review__info">
+        Problems trying to resolve the conflict between the two major realms of
+        Classical physics: Newtonian mechanics
+      </p>
+      <div class="review__item flex">
+        <img
+          src="/assests/img/review/Testimonials card-2.svg"
+          class="review_testimonials"
+        />
+        <img
+          src="/assests/img/review/Testimonials card-3.svg"
+          class="review_testimonials"
+        />
+        <img
+          src="/assests/img/review/Testimonials card.svg"
+          class="review_testimonials"
+        />
+      </div>
+    </section>
+    <section class="join-us tc ju_container">
+      <h6 class="join-us__newletter">Newsletter</h6>
+      <h2 class="join-us__title">JOIN US</h2>
+      <p class="join-us__descrip">
+        Problems trying to resolve the conflict between the two major realms of
+        Classical physics: Newtonian mechanics
+      </p>
+
+      <form action="#" class="join-us__email">
+        <input
+          class="join-us__input"
+          type="email"
+          id="email"
+          placeholder="  Your Email"
+          required
+        />
+        <input class="join-us__btn" type="submit" value="Subscribe" />
+      </form>
+    </section>
+
+    <section class="footer footer_container">
+      <div class="footer__info footer__flex">
+        <h5>Company Info</h5>
+        <a href="#">About Us</a>
+        <a href="#">Carrier</a>
+        <a href="#">We are hiring</a>
+        <a href="#">Blog</a>
+      </div>
+
+      <div class="footer__legal footer__flex">
+        <h5>Legal</h5>
+        <a href="#">About Us</a>
+        <a href="#">Carrier</a>
+        <a href="#">We are hiring</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer__features footer__flex">
+        <h5>Features</h5>
+        <a href="#">Business Marketing</a>
+        <a href="#">User Analytic</a>
+        <a href="#">Live Chat</a>
+        <a href="#">Unlimited Support</a>
+      </div>
+      <div class="footer__resources footer__flex">
+        <h5>Resources</h5>
+        <a href="#">IOS & Android</a>
+        <a href="#">Watch a Demo</a>
+        <a href="#">Customers</a>
+        <a href="#">API</a>
+      </div>
+      <div class="footer__touch footer__flex">
+        <h5>Get in Touch</h5>
+        <div class="footer__touch__content flex">
+          <img src="assests/img/footer/phone.svg" class="footer__touch__img" />
+          <h6 class="footer__touch__text">(480)555-0103</h6>
+        </div>
+        <div class="footer__touch__content flex">
+          <img
+            src="assests/img/footer/address.svg"
+            class="footer__touch__img"
+          />
+          <h6 class="footer__touch__text">
+            4517 Washington Ave. Manchester, Kentucky 39495
+          </h6>
+        </div>
+        <div class="footer__touch__content flex">
+          <img
+            src="assests/img/footer/message.svg"
+            class="footer__touch__img"
+          />
+          <h6 class="footer__touch__text">debra.holt@example.com</h6>
+        </div>
+      </div>
+    </section>
+    <div class="footer__content flex flex-jc-sb">
+      <p>All Right Reserved</p>
+      <div class="social">
+        <a href="#"><img src="assests/img/footer/facebook.svg" /></a>
+        <a href="#"><img src="assests/img/footer/instagram.svg" /></a>
+        <a href="#"><img src="assests/img/footer/twitter.svg" /></a>
       </div>
     </div>
-
-      <div class="hero__text">
-        <h5>Welcome</h5>
-        <h1>
-          Online Appoinment
-        </h1>
-        <P>Medical Functional is most focused in helping you 
-          discover your most beauiful smile</P>
-          <a href="#" class="btn1_cta button "> 
-            Get Quote Now
-          </a>
-          <a href="#" class="btn2_cta button"> 
-            Learn More
-          </a>
-         </div>
-    </section>
-    <section class="layout-2">
-      <h6>Practice Advice</h6>
-      <h2>Our Activity</h2>
-      <p>Problems trying to resolve the conflict between 
-        the two major realms of Classical physics: Newtonian mechanics </p>
-
-    </section>
-
-
-    </div>
+    -->
+    <script src="/assests/js/script.js"></script>
   </body>
 </html>

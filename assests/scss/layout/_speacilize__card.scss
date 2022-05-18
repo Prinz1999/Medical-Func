@@ -1,0 +1,185 @@
+@use "../util" as u;
+.specialize {
+  padding: 160px 188px 184px 195px;
+
+  @include u.breakpoint-down(medium) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0px 40px 0px 40px;
+  }
+
+  h2 {
+    margin-top: 10px;
+    letter-spacing: 1.2px;
+  }
+  &__desc {
+    margin-top: -5px;
+    width: 40%;
+    line-height: 22px;
+    font-weight: 400;
+    margin-bottom: 76px;
+    letter-spacing: 0.2px;
+  }
+
+  //// for images
+  &__container {
+    width: 100%;
+    position: relative;
+  }
+
+  // &__card {
+  //   gap: 10px;
+  //}
+
+  //&__container {
+  //background-image: url(/assests/img/doctor_speacilize/Doc.svg);
+  // height: 300px;
+  // gap: 10px;
+  // background-repeat: no-repeat;
+  // width: 100%;
+  &__container {
+    position: relative;
+    width: 100%;
+
+    // &__content {
+    //   position: absolute;
+    // }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    &__sale {
+      // }
+
+      // old version
+      // &__sale {
+
+      top: 0px;
+      position: absolute;
+      margin-top: 20px;
+      margin-left: 20px;
+      display: inline-flex;
+      width: 51px;
+      height: 24px;
+      border-radius: 3px;
+      background-color: red;
+      color: white;
+      padding-left: 10px;
+    }
+  }
+
+  &__cirlce {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: block;
+    top: margin-top;
+    /* margin-top: 174px; */
+    /* margin-left: 57px; */
+    border-radius: 385px;
+    position: absoulte;
+    // top: 237px;
+    // left: 16px;
+    img {
+      margin: 11px;
+    }
+    .eye_img {
+      width: 60%;
+      margin-left: 8px;
+      margin-top: 10px;
+    }
+  }
+
+  &__text {
+    margin-left: 25px;
+    padding-right: 25px;
+
+    &__category {
+      color: u.$primary-text-color;
+      padding-top: 26px;
+
+      &__rating {
+        display: inline-flex;
+        background-color: hsl(0, 0%, 0%);
+        color: hsl(0, 0%, 100%);
+        width: 55px;
+        height: 27px;
+        border-radius: 20px;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+    &__title {
+      margin-top: 11px;
+      color: black;
+      margin-bottom: 0px;
+    }
+    &__descrip {
+      margin-top: 10px;
+      padding-right: 18px;
+      margin-bottom: 0px;
+    }
+    &__sales {
+      margin-top: -20px;
+      gap: 5px;
+      h6 {
+        color: u.$second-text-color;
+      }
+    }
+    &__price {
+      margin-top: -51px;
+      gap: 5px;
+
+      &__discount {
+        color: u.$green-text-color;
+      }
+    }
+
+    &__detail {
+      margin-top: -12px;
+      margin-bottom: 42px;
+
+      p {
+        font-size: u.rem(12);
+        padding-top: 14px;
+      }
+      img {
+        margin-right: 7px;
+      }
+    }
+  }
+  &__btn {
+    border-radius: 37px;
+    // img {
+    //   width: 6px;
+    //   margin-left: 10px;
+    // }
+  }
+}
+
+/////////////////////////@at-root
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
