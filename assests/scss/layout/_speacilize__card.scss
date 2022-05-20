@@ -1,0 +1,180 @@
+@use "../util" as u;
+.specialize {
+  padding: 160px 188px 184px 195px;
+
+  @include u.breakpoint-down(medium) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0px 40px 0px 40px;
+  }
+
+  h2 {
+    margin-top: 10px;
+    letter-spacing: 1.2px;
+  }
+  &__desc {
+    margin-top: -5px;
+    width: 50%;
+    line-height: 22px;
+    margin-bottom: 76px;
+
+    @include u.breakpoint-down(small) {
+      width: 80%;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    @include u.breakpoint-down(medium) {
+      grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+    }
+    @include u.breakpoint-down(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__card {
+    @include u.breakpoint-down(small) {
+      margin-bottom: 35px;
+    }
+  }
+
+  //// for images////////
+  &__container {
+    width: 100%;
+    position: relative;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 9%;
+    left: 26%;
+    gap: 10px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    &__sale {
+      top: 0px;
+      position: absolute;
+      margin-top: 20px;
+      margin-left: 20px;
+      display: inline-flex;
+      width: 51px;
+      height: 24px;
+      border-radius: 3px;
+      background-color: red;
+      color: hsl(0, 0%, 100%);
+      padding-left: 10px;
+
+      @include u.breakpoint-down(medium) {
+        width: 41px;
+        height: 18px;
+        font-size: 12px;
+        margin-top: 13px;
+        margin-left: 6px;
+      }
+    }
+
+    &__cirlce {
+      width: 40px;
+      height: 40px;
+      background-color: hsl(0, 0%, 100%);
+      display: block;
+      top: margin-top;
+      border-radius: 385px;
+
+      img {
+        margin: 11px;
+      }
+      .eye-img {
+        width: 60%;
+        margin-left: 8px;
+        margin-top: 9px;
+      }
+
+      @include u.breakpoint-down(medium) {
+        width: 28px;
+        height: 28px;
+
+        img,
+        .eye-img {
+          width: 60%;
+          margin-left: 6px;
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+
+  //For Text
+  &__text {
+    margin-left: 25px;
+    padding-right: 25px;
+
+    &__category {
+      color: u.$primary-text-color;
+      padding-top: 26px;
+
+      &__rating {
+        display: inline-flex;
+        background-color: hsl(0, 0%, 0%);
+        color: hsl(0, 0%, 100%);
+        width: 55px;
+        height: 27px;
+        border-radius: 20px;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+    &__title {
+      margin-top: 11px;
+      color: black;
+      margin-bottom: 0px;
+    }
+    &__descrip {
+      margin-top: 10px;
+      padding-right: 18px;
+      margin-bottom: 0px;
+    }
+    &__sales {
+      margin-top: -20px;
+      gap: 5px;
+      h6 {
+        color: u.$second-text-color;
+      }
+    }
+    &__price {
+      margin-top: -51px;
+      gap: 5px;
+
+      &__discount {
+        color: u.$green-text-color;
+      }
+    }
+
+    &__detail {
+      margin-top: -12px;
+      margin-bottom: 42px;
+
+      p {
+        font-size: u.rem(12);
+        padding-top: 14px;
+      }
+      img {
+        margin-right: 7px;
+      }
+    }
+  }
+  &__btn {
+    border-radius: 37px;
+    // img {
+    //   width: 6px;
+    //   margin-left: 10px;
+    // }
+  }
+}

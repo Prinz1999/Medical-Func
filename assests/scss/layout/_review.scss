@@ -1,0 +1,40 @@
+@use "../util" as u;
+.review {
+  @include u.breakpoint-down(medium) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 160px 40px 0px 40px;
+  }
+  &__advice {
+    margin: 0;
+  }
+  &__title {
+    margin: 0;
+    padding-top: 10px;
+  }
+  &__info {
+    width: 42%;
+    padding-top: 10px;
+    @include u.breakpoint-down(medium) {
+      width: 73%;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    @include u.breakpoint-down(medium) {
+      grid-template-columns: repeat(auto-fill, minmax(min(214px, 100%), 1fr));
+    }
+    @include u.breakpoint-down(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__testimonials {
+    width: 100%;
+    height: auto;
+  }
+}

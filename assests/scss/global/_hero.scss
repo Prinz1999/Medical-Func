@@ -1,80 +1,144 @@
-@use "..//util" as u;
+@use "../util" as u;
 .hero {
-  padding-left: u.rem(132);
+  @include u.breakpoint-down(small) {
+    padding-left: 0;
+  }
+  @include u.breakpoint-up(medium) {
+    display: flex;
+    height: 600px;
+    padding-left: 40px;
+  }
+
+  @include u.breakpoint-up(large) {
+    display: flex;
+    margin-top: -98px;
+    padding-left: u.rem(125);
+  }
 
   &_image {
-    background-image: url(/assests/img/top-right.svg);
-    max-width: 100%;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: right top;
-    margin-top: -98px;
-    z-index: -1;
-    flex: 1;
-    order: 2;
-
-    &__container {
-      background-image: url(/assests/img/half\ pie.svg),
-        url(/assests/img/half_circle.svg);
-      background-position: 99% 25%, right bottom;
-      background-repeat: no-repeat;
-      height: 700px;
-      max-width: 786px;
-    }
- 
-
-  &__graph {
-    position: absolute;
-    margin-top: 263px;
-    margin-left: 123px;
-    z-index: 1;
-  }
-  &__profile {
-    max-width: 100%;
     position: relative;
-    margin-top: u.rem(145);
-    padding-left: 17.5rem;
-  }
-}
+    background: url(/assests/img/top-right.svg) no-repeat right / cover;
+    width: 100%;
+    min-height: 21.875rem;
 
-&__text {
-  margin-top: u.rem(140);
-  width: u.em(573);
-  height: u.em(386);
+    @include u.breakpoint-up(medium) {
+      flex: 2;
+      order: 2;
+      height: 580px;
+    }
 
-  h1 {
-    width: u.rem(257);
-    line-height: 50px;
-  }
-  h5 {
-    color: hsl(202, 87%, 54%);
-    margin-bottom: 30px;
-  }
-  p {
-    line-height: u.rem(30);
-    width: 25.5rem;
-    padding-bottom: u.rem(18);
-  }
-}
-.btn1_cta {
-  color: white;
-  text-transform: capitalize;
-  text-align: center;
-  line-height: 22px;
-  font-weight: 700;
-  height: 52px;
-  margin-right: u.rem(10);
-}
+    @include u.breakpoint-up(large) {
+      background: url(/assests/img/top-right.svg) no-repeat right / contain;
+      position: relative;
+      border-radius: 0px 0px 0px 150px;
+      background-attachment: fixed;
+      margin-top: 0px;
+      height: u.rem(700);
+      z-index: -1;
+      flex: 1.6;
+      order: 2;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: url(/assests/img/hero.svg) no-repeat;
+      background-size: 100%;
+      background-position: right bottom;
+      width: 100%;
+      right: 8px;
+      height: 100%;
+      top: 77px;
 
-.btn2_cta {
-  color: hsl(202, 87%, 54%);
-  text-align: center;
-  line-height: 22px;
-  font-weight: 700;
-  height: 52px;
-  text-transform: capitalize;
-  background-color: white;
-  border: 1px solid black;
-  border-color: hsl(202, 87%, 54%);
-}
+      @include u.breakpoint-up(large) {
+        width: 118%;
+      }
+
+      @include u.breakpoint-up(medium) {
+        background-position: center;
+        width: 117%;
+      }
+    }
+
+    ///for tablet
+    // @include u.breakpoint-up(medium) {
+    //   background-size: 110%;
+    //   width: 120%;
+    //   height: u.rem(700);
+    //   top: 120px;
+    // }
+  }
+
+  // @include u.breakpoint-down(medium) {
+  // //   padding-left: 0;
+  // //   margin-top: 0;
+  // //   background-size: cover;
+  // //   background-position: center center;
+  // //   min-height: 17.5rem;
+  // // }
+
+  // &__container {
+  //   background-image: url(/assests/img/half\ pie.svg),
+  //     url(/assests/img/half_circle.svg);
+  //   background-position: 100% 25%, 97% bottom;
+  //   background-repeat: no-repeat;
+  //   height: 700px;
+  //   max-width: 800px;
+  // }
+
+  // &__graph {
+  //   position: absolute;
+  //   margin-top: 263px;
+  //   margin-left: 123px;
+  //   z-index: 1;
+  // }
+  // &__profile {
+  //   max-width: 100%;
+  //   position: relative;
+  //   margin-top: u.rem(145);
+  //   padding-left: 17.5rem;
+  // }
+  // &__slide {
+  //   margin-top: -133px;
+  //   padding-bottom: 29px;
+  //   margin-left: 153px;
+  //   z-index: 1;
+  //   position: relative;
+  // }
+
+  &__text {
+    margin-top: u.rem(140);
+
+    @include u.breakpoint-up(medium) {
+      width: u.em(573);
+      height: u.em(386);
+      flex: 2;
+      order: 1;
+    }
+
+    h1 {
+      width: u.rem(257);
+      line-height: 50px;
+    }
+    h5 {
+      color: u.$primary-text-color;
+      margin-bottom: 30px;
+    }
+    p {
+      line-height: u.rem(30);
+      padding-bottom: u.rem(18);
+
+      @include u.breakpoint-up(medium) {
+        width: 25.5rem;
+      }
+    }
+    //for mobile
+    &__container {
+      padding: 0px 20px 0px 20px;
+    }
+    .btn1_cta {
+      color: u.$light-text-color;
+      height: 52px;
+      margin-right: u.rem(10);
+    }
+  }
 }
