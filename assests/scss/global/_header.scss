@@ -54,9 +54,6 @@ a:hover {
   }
   // for nav link
   &_link {
-    @include u.breakpoint-up(medium) {
-      margin-left: -248px;
-    }
     border: 1px;
     a {
       transition: color 200ms ease-in-out;
@@ -67,6 +64,7 @@ a:hover {
   }
 
   &_link_right {
+    flex-basis: 31%;
     a {
       &:not(:last-child) {
         margin-right: 45px;

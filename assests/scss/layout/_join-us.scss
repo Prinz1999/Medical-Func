@@ -4,10 +4,16 @@
 }
 
 .join-us {
+  @include u.breakpoint-down(medium) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 160px 40px 0px 40px;
+  }
   &__newletter {
     margin: 0;
     padding-bottom: 10px;
   }
+
   &__title {
     margin: 0;
     padding-bottom: 10px;
@@ -17,6 +23,8 @@
   }
   &__email {
     padding-top: 80px;
+    display: flex;
+    justify-content: center;
   }
   &__input {
     width: 517px;
@@ -28,13 +36,14 @@
   }
 
   &__btn {
+    display: block;
     width: 117px;
     height: 58px;
-    padding: 0;
     border: 1px solid #e6e6e6;
-    background-color: u.$primary-text-color;
-    color: white;
     border-radius: 0px 5px 5px 0px;
     margin-left: -10px;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
