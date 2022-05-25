@@ -9,17 +9,14 @@
   </head>
   <body>
     <header class="header">
+      <div class="overlay has-fade"></div>
       <div class="bg_img">
         <nav class="flex flex-jc-sb flex-ai-c">
           <a href="#" class="header__logo"
             ><img src="./assests/img/logo.svg"
           /></a>
 
-          <a
-            id="btnHamburger"
-            href="#"
-            class="header__hamburger hide-for-desktop"
-          >
+          <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
             <span></span>
             <span></span>
             <span></span>
@@ -38,6 +35,12 @@
             </a>
           </div>
         </nav>
+        <div class="header__menu has-fade menu-text">
+          <a href="#" class="menu__link">Home</a>
+          <a href="#" class="menu__link">Product</a>
+          <a href="#" class="menu__link">Pricing</a>
+          <a href="#" class="menu__link">Contact</a>
+        </div>
       </div>
     </header>
 
@@ -59,7 +62,6 @@
         </p>
         <a href="#" class="btn1_cta button btn"> Get Quote Now </a>
         <a href="#" class="btn2_cta button btn"> Learn More </a>
-        </a>
       </div>
     </section>
     <section class="activity">
@@ -510,7 +512,11 @@
           placeholder="  Your Email"
           required
         />
-        <input class="join-us__btn button btn" type="submit" value="Subscribe" />
+        <input
+          class="join-us__btn button btn"
+          type="submit"
+          value="Subscribe"
+        />
       </form>
     </section>
 
@@ -576,10 +582,15 @@
         <p>All Right Reserved</p>
         <div class="social">
           <div class="social_links">
-            <a href="#" class="social_links__hover"><img src="assests/img/footer/facebook.svg" /></a>
-            <a href="#" class="social_links__hover" ><img src="assests/img/footer/instagram.svg" /></a>
-            <a href="#" class="social_links__hover"><img src="assests/img/footer/twitter.svg" /></a>
-            
+            <a href="#" class="social_links__hover"
+              ><img src="assests/img/footer/facebook.svg"
+            /></a>
+            <a href="#" class="social_links__hover"
+              ><img src="assests/img/footer/instagram.svg"
+            /></a>
+            <a href="#" class="social_links__hover"
+              ><img src="assests/img/footer/twitter.svg"
+            /></a>
           </div>
         </div>
       </div>

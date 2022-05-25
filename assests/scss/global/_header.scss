@@ -7,9 +7,41 @@ a:hover {
   line-height: u.rem(22);
   font-weight: 700;
 
+  &.open {
+    .header__toggle {
+      span:first-child {
+        transform: rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .overlay {
+    opacity: 0;
+    position: fixed;
+    top: 99.8px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    visibility: hidden;
+    background: linear-gradient(u.$primary-text-color, transparent);
+    &.fade-in {
+      visibility: visible;
+    }
+  }
+
   nav {
     display: flex;
     padding: 30px;
+  }
+  @include u.breakpoint-down(medium) {
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
   }
   &__logo {
     @include u.breakpoint-down(small) {
@@ -26,32 +58,42 @@ a:hover {
     }
   }
   //for hamburger menu
-  &__hamburger {
+  &__toggle {
     span {
       display: block;
       width: 26px;
       height: 2px;
       background-color: hsla(240, 65%, 36%, 0.984);
       transition: all 300ms ease-in-out;
-      transform-origin: center left;
+      transform-origin: 3px 1px;
 
       &:not(:last-child) {
         margin-bottom: 5px;
       }
     }
+  }
 
-    &.open {
-      span:first-child {
-        transform: rotate(45deg);
-      }
-      span:nth-child(2) {
-        opacity: 0;
-      }
-      span:last-child {
-        transform: rotate(-45deg);
+  /// for hamburger  menu
+  .header__menu {
+    margin-top: 10px;
+    background-color: whitesmoke;
+    padding: u.rem(36);
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translate(-50%);
+
+    .menu__link {
+      display: block;
+      color: u.$text-color;
+      padding: u.rem(10);
+      text-align: center;
+      &:hover {
+        color: u.$primary-text-color;
       }
     }
   }
+
   // for nav link
   &_link {
     border: 1px;
@@ -95,16 +137,10 @@ a:hover {
     }
   }
 }
+
 .bg_img {
-  // width: 100%;
-  // position: relative;
-  // background-image: url(/assests/img/top-left-corner.svg);
-  // background-position: left top;
-  // background-repeat: no-repeat;
   @include u.breakpoint-down(small) {
     background-image: none;
   }
   background: url(/assests/img/top-left-corner.svg) no-repeat left top / contain;
-
-  // min-height: 17.65rem;
 }
