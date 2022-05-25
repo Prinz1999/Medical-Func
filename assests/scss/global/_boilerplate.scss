@@ -17,6 +17,9 @@ body {
   font-size: u.rem(14);
   color: hsl(0, 0%, 45%);
   font-family: sans-serif;
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 a,

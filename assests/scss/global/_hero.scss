@@ -17,6 +17,7 @@
 
   &_image {
     position: relative;
+    z-index: -1;
     background: url(/assests/img/top-right.svg) no-repeat right / cover;
     width: 100%;
     min-height: 21.875rem;
