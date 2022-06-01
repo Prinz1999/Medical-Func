@@ -1,10 +1,10 @@
 @use "../util" as u;
+
 .container {
-  padding: 248px 195px 160px 195px;
+  align-items: center;
 }
 .leading {
-  height: auto;
-  margin-top: u.em(164);
+  padding: 160px 0px 160px 0px;
   background-color: u.$faded-secondary-color;
 
   @include u.breakpoint-down(medium) {
@@ -28,7 +28,7 @@
     display: inline-block;
     background-image: url(/assests/img/Leading_medicine/img.svg);
     height: 430px;
-    margin-top: -95px;
+    margin-top: -46px;
     background-position: 92% 25%, 92% 25%;
     background-repeat: no-repeat;
     flex: 1;
@@ -45,8 +45,9 @@
   }
 
   &__line {
-    max-width: 100%;
-    height: auto;
+    width: 94px;
+    height: 7px;
+    background-color: hsl(0, 78%, 58%);
   }
   &__text {
     max-width: 30%;
@@ -63,13 +64,12 @@
       padding-top: 35px;
       color: u.$text-color;
     }
-
-    &__link {
-      color: u.$primary-text-color !important;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 24px;
-      letter-spacing: 0.2px;
-    }
+  }
+  &__links {
+    color: u.$primary-text-color !important;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
   }
 }

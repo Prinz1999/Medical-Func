@@ -138,7 +138,7 @@ a:hover {
   }
 }
 
-.bg_img {
+.header__img {
   @include u.breakpoint-down(small) {
     background-image: none;
   }

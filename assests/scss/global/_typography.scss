@@ -2,7 +2,8 @@
 
 h1,
 h2,
-h3 {
+.heading-h2,
+.heading-h3 {
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: 0.2px;
@@ -24,7 +25,8 @@ h1 {
   color: hsl(228, 28%, 20%);
   letter-spacing: 0.2px;
 }
-h2 {
+h2,
+.heading-h2 {
   // font-size: clamp(1.375rem, 0.875rem +1.5vw, 2.25rem);
   font-size: clamp(u.rem(22), u.rem(14) + 1.5vw, u.rem(36));
 }
@@ -33,15 +35,18 @@ p {
   font-size: u.rem(16);
 }
 
-h5 {
+.heading-h5 {
+  display: block;
   font-size: u.rem(16);
   line-height: 24px;
   letter-spacing: 0.2px;
   font-weight: 700;
-  color: u.$text-color;
+  color: u.$primary-text-color;
+  margin-bottom: 30px;
 }
 
-h6 {
+.heading-h6 {
+  display: block;
   font-size: u.rem(14);
   font-weight: 700;
   line-height: u.rem(24);

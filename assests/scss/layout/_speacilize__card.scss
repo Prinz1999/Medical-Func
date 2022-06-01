@@ -1,18 +1,18 @@
 @use "../util" as u;
 .specialize {
-  padding: 160px 188px 184px 195px;
+  padding: 160px 0px 184px 0px;
 
   @include u.breakpoint-down(medium) {
     margin-left: 0;
     margin-right: 0;
-    padding: 0px 40px 0px 40px;
+    padding: 160px 40px 160px 40px;
   }
 
   h2 {
     margin-top: 10px;
     letter-spacing: 1.2px;
   }
-  &__desc {
+  &__descr {
     margin-top: -5px;
     width: 50%;
     line-height: 22px;
@@ -34,30 +34,29 @@
       grid-template-columns: 1fr;
     }
   }
-  &__card {
+  .card {
     @include u.breakpoint-down(small) {
       margin-bottom: 35px;
     }
   }
 
   //// for images////////
-  &__container {
-    width: 100%;
-    position: relative;
-  }
-
-  &__content {
-    position: absolute;
-    bottom: 9%;
-    left: 26%;
-    gap: 10px;
-  }
-
-  &__img {
-    display: block;
-    width: 100%;
-    height: auto;
-
+  .card {
+    &__figure {
+      width: 100%;
+      position: relative;
+    }
+    &__content {
+      position: absolute;
+      bottom: 9%;
+      left: 26%;
+      gap: 10px;
+    }
+    &__img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
     &__sale {
       top: 0px;
       position: absolute;
@@ -85,7 +84,6 @@
       height: 40px;
       background-color: hsl(0, 0%, 100%);
       display: block;
-      top: margin-top;
       border-radius: 385px;
 
       img {
@@ -109,18 +107,18 @@
         }
       }
     }
-  }
+    //For Text
+    &__body {
+      margin-left: 25px;
+      padding-right: 25px;
+    }
 
-  //For Text
-  &__text {
-    margin-left: 25px;
-    padding-right: 25px;
-
-    &__category {
+    &__title {
       color: u.$primary-text-color;
       padding-top: 26px;
 
-      &__rating {
+      .card__title--rating {
+        padding-top: 0px;
         display: inline-flex;
         background-color: hsl(0, 0%, 0%);
         color: hsl(0, 0%, 100%);
@@ -131,34 +129,34 @@
         align-items: center;
       }
     }
-    &__title {
+    &__subtitle {
       margin-top: 11px;
       color: black;
       margin-bottom: 0px;
     }
-    &__descrip {
+    &__copy {
+      font-size: u.rem(14);
       margin-top: 10px;
-      padding-right: 18px;
-      margin-bottom: 0px;
+      padding-right: 55px;
     }
+
     &__sales {
-      margin-top: -20px;
       gap: 5px;
-      h6 {
+      .heading-h6 {
         color: u.$second-text-color;
       }
     }
-    &__price {
-      margin-top: -51px;
+    &__amount {
+      padding-top: 7px;
       gap: 5px;
 
-      &__discount {
+      .card__amount--discount {
         color: u.$green-text-color;
       }
     }
 
-    &__detail {
-      margin-top: -12px;
+    &__info {
+      margin-top: -19px;
       margin-bottom: 42px;
 
       p {
@@ -170,11 +168,11 @@
       }
     }
   }
-  &__btn {
+  .action {
     border-radius: 37px;
-    // img {
-    //   width: 6px;
-    //   margin-left: 10px;
-    // }
+    img {
+      width: 6px;
+      margin-left: 10px;
+    }
   }
 }
