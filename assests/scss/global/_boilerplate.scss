@@ -63,3 +63,10 @@ a:hover {
   margin: 0 auto;
   padding: 0px 40px 0px 40px;
 }
+.main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+section {
+  scroll-snap-align: start;
+}
