@@ -1,5 +1,6 @@
 @use "../util" as u;
 .pricing {
+  padding: 160px 40px 160px 40px;
   @include u.breakpoint-down(medium) {
     margin-left: 0;
     margin-right: 0;
@@ -7,10 +8,11 @@
   }
 
   &__title {
+    padding-top: 10px;
     color: u.$text-color !important;
   }
 
-  &__descrip {
+  &__copy {
     padding-top: 10px;
     line-height: 24px;
     width: 46%;
@@ -18,10 +20,10 @@
       width: 73%;
     }
   }
-  &__pricing_container {
+
+  &__container {
     margin-top: 109px;
     gap: 35px;
-
     ////using grid/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -34,15 +36,16 @@
       grid-template-columns: 1fr;
     }
     //using flex wrap//
-    @include u.breakpoint-down(medium) {
-      // flex-wrap: wrap;
-      // align-items: center;
-      // justify-content: center;
-    }
+    // @include u.breakpoint-down(medium) {
+    //   flex-wrap: wrap;
+    //   align-items: center;
+    //   justify-content: center;
+    // }
   }
+
   &__card {
     padding: 50px 40px;
-    box-shadow: 0px 13px 19px rgb(0 0 0 / 7%);
+    box-shadow: 0px 13px 19px hsla(0, 0%, 0%, 0.071);
     position: relative;
   }
 
@@ -64,33 +67,35 @@
       color: white;
     }
 
-    &__cirlce {
+    &--cirlce {
       width: 96px;
       height: 96px;
       border-radius: 360px;
       display: block;
       background-color: hsl(202, 87%, 54%);
+      margin-bottom: 35px;
 
-      img {
+      svg {
         margin-top: 29px;
         margin-left: 29px;
       }
     }
   }
-  h3 {
+  .heading-h3 {
     text-transform: uppercase;
     padding-top: 35px;
     font-size: u.rem(24);
   }
-
-  h2 {
+  &__amount {
+    font-size: 40px;
     color: u.$primary-text-color;
     margin-bottom: 0;
   }
 
   &__info {
-    width: 73%;
+    width: 75%;
     color: u.$second-text-color;
+    padding: 28px 0px 28px 0px;
   }
 
   &__txt {
@@ -98,19 +103,20 @@
     color: #8ec2f2;
   }
 
-  &__btn-cta {
-    margin-top: 15px;
+  &__btn {
     display: inline-block;
     width: 100%;
     color: white !important;
   }
-  &__card-item {
-    align-items: flex-start;
-    &__txt {
-      padding-left: 10px;
-      margin-top: 6px;
-      color: u.$text-color;
-    }
+  &__item {
+    align-items: center;
+    gap: 10px;
+    color: u.$text-color;
+    max-width: 96%;
+    padding-bottom: 23px;
+  }
+  &__spec {
+    color: u.$text-color;
   }
 }
 .margin-top {

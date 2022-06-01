@@ -1,18 +1,16 @@
 @use "../util" as u;
 .review {
+  padding: 160px 40px 163px 40px;
   @include u.breakpoint-down(medium) {
     margin-left: 0;
     margin-right: 0;
-    padding: 160px 40px 0px 40px;
+    padding: 160px 40px 163px 40px;
   }
-  &__advice {
-    margin: 0;
+  .heading-h6 {
+    padding-bottom: 10px;
   }
-  &__title {
-    margin: 0;
-    padding-top: 10px;
-  }
-  &__info {
+
+  &__descr {
     width: 42%;
     padding-top: 10px;
     @include u.breakpoint-down(medium) {
