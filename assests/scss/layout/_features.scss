@@ -3,11 +3,11 @@
 .activity {
   margin: 160px 0px 164px 0px;
 
-  @include u.breakpoint-down(medium) {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0px 40px 0px 40px;
-  }
+  // @include u.breakpoint-down(medium) {
+  //   margin-left: 0;
+  //   margin-right: 0;
+  //   padding: 0px 40px 0px 40px;
+  // }
 
   .heading-h6 {
     margin-bottom: u.rem(14);
